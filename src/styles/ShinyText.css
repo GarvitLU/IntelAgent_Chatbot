@@ -1,0 +1,16 @@
+/* src/styles/ShinyText.css */
+
+.shiny-text {
+  background: linear-gradient(to right, #ffffff, #ba83f6, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto; /* Make the gradient wider than the text */
+  animation: shiny-animation 3s linear infinite;
+}
+
+@keyframes shiny-animation {
+  to {
+    background-position: 200% center;
+  }
+} 

@@ -1,0 +1,206 @@
+.container {
+    min-height: 100vh;
+    /* Dynamic gradient background */
+    background-image: linear-gradient(
+        to right top,
+        #9063e8,
+        #7252c1,
+        #57419b,
+        #3d3076,
+        #272053,
+        #1d1943,
+        #141234,
+        #0e0725,
+        #0d0722,
+        #0b0620,
+        #0a061d,
+        #08051a
+    );
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+    /* Add a subtle animation to make the gradient more dynamic */
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+    font-family: "OpenSauce", sans-serif !important;
+}
+
+/* Add gradient animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.patternOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 0h1v48h-1V0zm69 0h1v48h-1V0zm-34 0h1v48h-1V0zM0 0h84v1H0V0zm0 47h84v1H0v-1zm75-23h9v1h-9v-1zM50 24h9v1h-9v-1zM25 24h9v1h-9v-1zM0 24h9v1H0v-1z' fill='%239063E8' fill-opacity='0.03'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239063E8' fill-opacity='0.02' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.7;
+    animation: patternFloat 15s linear infinite;
+}
+
+/* Add subtle pattern animation */
+@keyframes patternFloat {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 100px 100px, 50px 50px;
+    }
+}
+
+/* Glow effects for depth */
+.glowEffect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: #9063e8;
+    filter: blur(120px);
+    opacity: 0.08;
+    pointer-events: none;
+    animation: glowPulse 8s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%,
+    100% {
+        opacity: 0.08;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.12;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.qrContainer {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 10;
+}
+
+.decorativeCorner1,
+.decorativeCorner2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(144, 99, 232, 0.3);
+    z-index: -1;
+}
+
+.decorativeCorner1 {
+    top: -15px;
+    left: -15px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.decorativeCorner2 {
+    bottom: -15px;
+    right: -15px;
+    border-left: none;
+    border-top: none;
+}
+
+.qrCard {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "OpenSauce", sans-serif !important;
+}
+
+.iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    background: rgba(144, 99, 232, 0.1);
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.qrIcon {
+    width: 48px;
+    height: 48px;
+    fill: #9063e8;
+}
+
+.title {
+    color: white;
+    font-size: 2.2rem;
+    margin: 0 0 2rem 0;
+    font-weight: bold; /* Using bold weight to match OpenSauce Bold */
+    background: linear-gradient(135deg, #fff 0%, #9063e8 80%, #7252c1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+    font-family: "OpenSauce", sans-serif !important;
+}
+
+.instruction {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: normal; /* Using normal weight to match OpenSauce Regular */
+    font-family: "OpenSauce", sans-serif !important;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .qrCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .qrWrapper {
+        padding: 1rem;
+    }
+
+    .qrCode {
+        width: 200px;
+        height: 200px;
+    }
+
+    .instruction {
+        font-size: 1rem;
+    }
+}

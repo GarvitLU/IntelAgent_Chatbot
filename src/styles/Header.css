@@ -1,0 +1,48 @@
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.mobile-menu {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gradient-button {
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(90deg, #2563EB, #7C3AED);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+} 

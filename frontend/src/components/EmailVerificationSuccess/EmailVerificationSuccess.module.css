@@ -1,0 +1,95 @@
+.verification-success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.verification-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+.success-icon i {
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+.verification-card h1 {
+    color: #333;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.verification-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .verification-card {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+
+    .success-icon {
+        font-size: 48px;
+    }
+
+    .verification-card h1 {
+        font-size: 20px;
+    }
+
+    .verification-card p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .verification-success-container {
+        padding: 10px;
+    }
+
+    .verification-card {
+        padding: 25px 15px;
+        margin: 10px;
+    }
+
+    .success-icon {
+        font-size: 40px;
+    }
+
+    .verification-card h1 {
+        font-size: 18px;
+    }
+
+    .verification-card p {
+        font-size: 13px;
+    }
+}
