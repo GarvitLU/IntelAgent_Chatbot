@@ -57,10 +57,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-12"
         >
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 font-[Montserrat]">
             <SplitText 
               text="The Future of Customer Interaction" 
-              className="text-white"
+              className="text-white font-[Montserrat]"
             />
           </h1>
           <motion.p
@@ -91,7 +91,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <a
-            href="#contact"
+            href="#ai-builder"
             className="bg-purple-600 text-white text-lg px-10 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition duration-300 ease-in-out inline-flex items-center justify-center"
           >
             Get Started

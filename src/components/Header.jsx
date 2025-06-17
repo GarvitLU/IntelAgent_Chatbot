@@ -44,9 +44,9 @@ const Header = () => {
         <a
           href="#contact"
           onClick={(e) => handleNavLinkClick(e, 'contact')}
-          className="gradient-button hidden md:block"
+          className="border-2 border-purple-600 text-purple-600 text-base px-6 py-2 rounded-full font-bold shadow-md hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out inline-flex items-center justify-center mx-4 my-2 text-center hidden md:block"
         >
-          Get Started
+          Contact Us
         </a>
         <button
           id="mobile-menu-button"
@@ -81,9 +81,9 @@ const Header = () => {
         <a
           href="#contact"
           onClick={(e) => handleNavLinkClick(e, 'contact')}
-          className="gradient-button mx-4 my-2 text-center block"
+          className="border-2 border-purple-600 text-purple-600 text-base px-6 py-2 rounded-full font-bold shadow-md hover:bg-purple-600 hover:text-white transition duration-300 ease-in-out inline-flex items-center justify-center mx-4 my-2 text-center block md:hidden"
         >
-          Get Started
+          Contact Us
         </a>
       </div>
     </header>

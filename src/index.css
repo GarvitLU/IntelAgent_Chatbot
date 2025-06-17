@@ -49,7 +49,7 @@ body {
   }
 
   .accent-text {
-    background: linear-gradient(90deg, #3B82F6, var(--accent-color));
+    background: linear-gradient(90deg, #8B5CF6, #A21CAF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
