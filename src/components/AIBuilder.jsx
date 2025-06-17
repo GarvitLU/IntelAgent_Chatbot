@@ -54,8 +54,17 @@ const AIBuilder = () => {
   };
 
   return (
-    <section id="ai-builder" className="py-20 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-4">
+    <section
+      id="ai-builder"
+      className="py-20 bg-dark-translucent text-white relative overflow-hidden backdrop-blur-md"
+    >
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'radial-gradient(circle at top right, rgba(139, 92, 246, 0.05) 0%, transparent 50%)',
+        }}
+      ></div>
+      <div className="relative z-10 container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,20 +94,20 @@ const AIBuilder = () => {
                 Upload a PDF or DOC file to get started with our AI assistant
               </p>
               <div className="relative">
-                <input
+            <input
                   type="file"
                   accept=".pdf,.doc,.docx"
                   onChange={handleFileChange}
                   className="hidden"
                   id="file-upload"
-                />
-                <label
+            />
+            <label
                   htmlFor="file-upload"
                   className="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg cursor-pointer hover:bg-purple-700 transition-colors"
-                >
+            >
                   <FiFile className="mr-2" />
                   Choose File
-                </label>
+            </label>
                 {selectedFile && (
                   <p className="mt-4 text-sm text-gray-400">
                     Selected: {selectedFile.name}
@@ -113,39 +122,39 @@ const AIBuilder = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-700 h-[400px] flex flex-col"
+            className="bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-700 min-h-[400px] flex flex-col"
           >
             <div className="flex items-center mb-6">
               <FiMessageSquare className="w-6 h-6 text-purple-500 mr-3" />
               <h3 className="text-2xl font-semibold text-white">AI Assistant</h3>
             </div>
-            <div className="flex-1 bg-gray-900/50 rounded-lg p-6 mb-4 overflow-hidden">
+            <div className="flex-1 bg-gray-900/50 rounded-lg p-6 mb-4 overflow-y-auto">
               <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-sm">AI</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 break-words">
                     {currentMessage}
                     <span className="inline-block w-2 h-4 bg-purple-500 ml-1 animate-pulse"></span>
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex space-x-4">
-              <input
-                type="text"
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+            <input
+              type="text"
                 placeholder="Type your message..."
                 className="flex-1 bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-purple-500"
-              />
-              <button
+            />
+          <button
                 className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50"
                 disabled
-              >
+          >
                 Send
-              </button>
-            </div>
-          </motion.div>
+          </button>
+          </div>
+        </motion.div>
         </div>
       </div>
     </section>

@@ -23,15 +23,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-black text-white">
-      <div className="container max-w-2xl">
+    <section
+      id="contact"
+      className="section-padding bg-dark-translucent text-white backdrop-blur-md relative overflow-hidden"
+    >
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'radial-gradient(circle at top right, rgba(139, 92, 246, 0.05) 0%, transparent 50%)',
+        }}
+      ></div>
+      <div className="relative z-10 container max-w-2xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
         >
-          Contact Us
+          Book a Demo
         </motion.h2>
         <motion.form
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +107,7 @@ const Contact = () => {
             type="submit"
             className="gradient-button w-full text-white text-lg px-6 py-3 rounded-lg font-bold shadow-lg hover:scale-105 transition duration-300 ease-in-out"
           >
-            Send Message
+            Book a Demo
           </button>
         </motion.form>
       </div>

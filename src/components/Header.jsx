@@ -9,6 +9,18 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleNavLinkClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      });
+      setIsMobileMenuOpen(false); // Close mobile menu on click
+    }
+  };
+
   return (
     <header className="header-bg sticky top-0 z-50 shadow-lg">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -16,21 +28,22 @@ const Header = () => {
           Intel<span className="accent-text">Agent</span>
         </a>
         <div className="hidden md:flex space-x-6">
-          <a href="#features" className="nav-link">
+          <a href="#features" onClick={(e) => handleNavLinkClick(e, 'features')} className="nav-link">
             Features
           </a>
-          <a href="#aibuilder" className="nav-link">
+          <a href="#ai-builder" onClick={(e) => handleNavLinkClick(e, 'ai-builder')} className="nav-link">
             AI Builder
           </a>
-          <a href="#about" className="nav-link">
+          <a href="#about" onClick={(e) => handleNavLinkClick(e, 'about')} className="nav-link">
             About Us
           </a>
-          <a href="#contact" className="nav-link">
-            Contact
+          <a href="#contact" onClick={(e) => handleNavLinkClick(e, 'contact')} className="nav-link">
+            Book a Demo
           </a>
         </div>
         <a
           href="#contact"
+          onClick={(e) => handleNavLinkClick(e, 'contact')}
           className="gradient-button hidden md:block"
         >
           Get Started
@@ -53,20 +66,21 @@ const Header = () => {
           isMobileMenuOpen ? 'block' : 'hidden'
         } md:hidden mobile-menu`}
       >
-        <a href="#features" className="mobile-menu-link">
+        <a href="#features" onClick={(e) => handleNavLinkClick(e, 'features')} className="mobile-menu-link">
           Features
         </a>
-        <a href="#aibuilder" className="mobile-menu-link">
+        <a href="#ai-builder" onClick={(e) => handleNavLinkClick(e, 'ai-builder')} className="mobile-menu-link">
           AI Builder
         </a>
-        <a href="#about" className="mobile-menu-link">
+        <a href="#about" onClick={(e) => handleNavLinkClick(e, 'about')} className="mobile-menu-link">
           About Us
         </a>
-        <a href="#contact" className="mobile-menu-link">
-          Contact
+        <a href="#contact" onClick={(e) => handleNavLinkClick(e, 'contact')} className="mobile-menu-link">
+          Book a Demo
         </a>
         <a
           href="#contact"
+          onClick={(e) => handleNavLinkClick(e, 'contact')}
           className="gradient-button mx-4 my-2 text-center block"
         >
           Get Started

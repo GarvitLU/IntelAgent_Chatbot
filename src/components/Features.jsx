@@ -98,7 +98,7 @@ const Features = () => {
                     viewport={{ once: true, amount: 0.5 }}
                     whileHover={{ scale: 1.03, boxShadow: '0 0 40px rgba(139, 92, 246, 0.7)' }}
                     transition={{ duration: 0.3 }}
-                  >
+            >
                     <img
                       src={feature.image}
                       alt={feature.title}
@@ -108,8 +108,8 @@ const Features = () => {
               )}
               <div className="md:w-1/2 text-center md:text-left">
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  {feature.title}
-                </h3>
+                {feature.title}
+              </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
                   {feature.description}
                 </p>
